@@ -145,5 +145,16 @@ footer {
     transform: translateY(0);
 }
 
-.box:nth-child(2) { transition-delay: 0.2s; }
-.box:nth-child(3) { transition-delay: 0.4s; }
+.box:nth-child(2) { 
+    transition-delay: 0.2s; 
+                  }
+.box:nth-child(3) {
+    transition-delay: 0.4s; 
+                  }
+
+.hidden-left {
+    transform: translateX(-100px);
+}
+.hidden-right {
+    transform: translateX(100px);
+}
