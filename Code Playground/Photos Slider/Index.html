@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Scroll Website</title>
+
+
+</head>
+
+<body>
+
+<!-- 🌐 Navbar -->
+<nav>
+    <h2>MyGallery</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- 🎯 Hero -->
+<section class="hero">
+    <h1>Welcome to My Photo World 📸</h1>
+</section>
+
+<!-- 📸 Gallery -->
+<section class="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="grid">
+        <div class="card hidden"><img src="https://picsum.photos/300?1"></div>
+        <div class="card hidden"><img src="https://picsum.photos/300?2"></div>
+        <div class="card hidden"><img src="https://picsum.photos/300?3"></div>
+        <div class="card hidden"><img src="https://picsum.photos/300?4"></div>
+        <div class="card hidden"><img src="https://picsum.photos/300?5"></div>
+        <div class="card hidden"><img src="https://picsum.photos/300?6"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 MyGallery | Made with ❤️</p>
+</footer>
+
+<script>
+// 🔥 Scroll Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
