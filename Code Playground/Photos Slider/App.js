@@ -1,4 +1,3 @@
-
 // 🔥 Scroll Animation
 const observer = new IntersectionObserver((entries) => {
 if (entry.isIntersecting) {
